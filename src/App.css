@@ -88,3 +88,99 @@ body {
   .hero__button:hover {
     background-color: #594036;
   }
+
+  .productos {
+    padding: 70px 40px;
+    background-color: white;
+  }
+
+  .productos_titulo {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .productos_titulo p {
+    margin-bottom: 8px;
+    color:#8b5e3c;
+    font-weight: bold;
+  }
+
+  .productos_titulo h2 {
+    color: #2c1e18;
+    font-size: 36px;
+  }
+
+  .productos_grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 24px;
+  }
+
+  .producto-card {
+    overflow: hidden;
+    border: 1px solid #e8e1dc;
+    border-radius: 16px;
+    background-color: #ffffff;
+  }
+
+  .producto_card_imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 180px;
+    background-color: #f7f3ee;
+    font-size: 70px;
+  }
+
+  .producto-card_contenido{
+    padding: 20px;
+  }
+
+  .producto-card_categoria{
+    color: #8b5e3c;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .producto-card h3 {
+    margin: 10px 0;
+    color: #2c1e18;
+    font-size: 22px;
+  }
+
+  .producto-card p {
+    min-height: 48px;
+    color: #66554d;
+    line-height: 1.5;
+  }
+
+  .producto-card_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .producto-card_footer strong {
+    color: #2c1e18;
+    font-size: 20px;
+  }
+
+  .producto-card_footer button{
+    border: none;
+    border-radius: 8px;
+    padding: 10px 14px;
+
+    background-color: #3b2a22;
+    color: white;
+
+    cursor: pointer;
+  }
+
+  .producto-card_footer button:hover {
+    background-color: #594036;
+  }
