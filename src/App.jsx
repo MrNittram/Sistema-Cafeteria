@@ -43,6 +43,9 @@ function App() {
   const [busqueda, setBusqueda] = useState('')
   const [productoSeleccionado, setProductoSeleccionado] = useState(null)
   const [carrito, setCarrito] = useState([])
+  const agregarAlCarrito = (producto) => {
+    setCarrito([...carrito, producto])
+  }
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
   )
