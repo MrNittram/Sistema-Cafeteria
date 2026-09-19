@@ -1,4 +1,4 @@
-function ProductoCard({ nombre, descripcion, precio, categoria }) {
+function ProductoCard({ nombre, descripcion, precio, categoria, verDetalle}) {
     return (
       <article className="producto-card">
         <div className="producto-card__imagen">
@@ -16,7 +16,7 @@ function ProductoCard({ nombre, descripcion, precio, categoria }) {
   
           <div className="producto-card__footer">
             <strong>${precio.toLocaleString('es-CL')}</strong>
-            <button>Ver producto</button>
+            <button onClick={verDetalle}>Ver producto</button>
           </div>
         </div>
       </article>

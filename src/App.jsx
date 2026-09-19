@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ProductoCard from './components/ProductoCard'
 import Buscador from './components/Buscador'
-
+import ProductoDetalle from './components/ProductoDetalle'
 
 const productos = [
   {
@@ -40,6 +40,7 @@ const productos = [
 
 function App() {
   const [busqueda, setBusqueda] = useState('')
+  const [productoSeleccionado, setProductoSeleccionado] = useState(null)
 
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
@@ -67,10 +68,20 @@ function App() {
               descripcion={producto.descripcion}
               precio={producto.precio}
               categoria={producto.categoria}
+              verDetalle={() => {
+                console.log('Abriendo:', producto.nombre)
+                setProductoSeleccionado(producto)
+              }}
             />
           ))}
         </div>
       </section>
+      {productoSeleccionado && (
+        <ProductoDetalle
+        producto={productoSeleccionado}
+        cerrarDetalle={() => setProductoSeleccionado(null)}
+        />
+      )}
     </>
   )
 }
