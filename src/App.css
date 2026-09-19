@@ -43,50 +43,20 @@ body {
     padding: 60px 20px;
   }
   .hero {
-    min-height: 520px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
+    text-align: center;
     background-color: #f7f3ee;
   }
   
-  .hero__content {
-    max-width: 700px;
-    text-align: center;
-  }
-  
-  .hero__subtitle {
-    margin-bottom: 12px;
-    color: #8b5e3c;
-    font-weight: bold;
-  }
-  
   .hero h1 {
-    margin-bottom: 20px;
-    font-size: 56px;
+    margin-bottom: 10px;
     color: #2c1e18;
+    font-size: 42px;
   }
   
-  .hero__description {
-    margin-bottom: 28px;
-    font-size: 18px;
-    line-height: 1.6;
+  .hero p {
     color: #66554d;
-  }
-  
-  .hero__button {
-    border: none;
-    border-radius: 8px;
-    padding: 14px 24px;
-    background-color: #3b2a22;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .hero__button:hover {
-    background-color: #594036;
+    font-size: 18px;
   }
 
   .productos {
