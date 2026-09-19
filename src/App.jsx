@@ -44,8 +44,30 @@ function App() {
   const [productoSeleccionado, setProductoSeleccionado] = useState(null)
   const [carrito, setCarrito] = useState([])
   const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto])
+    const productoExistente = carrito.find(
+      (item) => item.id === producto.id
+    )
+    if (productoExistente) {
+      setCarrito(
+        carrito.map((item) =>
+          item.id === producto.id
+            ? { ...item, cantidad: item.cantidad + 1 }
+            : item
+        )
+      )
+    } else {
+      setCarrito([
+        ...carrito,
+        { ...producto, cantidad: 1 }
+      ])
+    }
   }
+  const eliminarDelCarrito = (id) => {
+    setCarrito(
+      carrito.filter((producto) => producto.id !== id)
+    )
+  }
+
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
   )
@@ -80,7 +102,10 @@ function App() {
           ))}
         </div>
       </section>
-      <Carrito carrito={carrito} />
+      <Carrito 
+        carrito={carrito} 
+        eliminarDelCarrito={eliminarDelCarrito}
+      />
       {productoSeleccionado && (
         <ProductoDetalle
         producto={productoSeleccionado}
