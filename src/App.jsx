@@ -1,7 +1,11 @@
+import {useState} from 'react'
 import './App.css'
+
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import ProductoCard from './components/ProductoCard'
+import Buscador from './components/Buscador'
+
 
 const productos = [
   {
@@ -35,6 +39,12 @@ const productos = [
 ]
 
 function App() {
+  const [busqueda, setBusqueda] = useState('')
+
+  const productosFiltrados = productos.filter((producto) =>
+    producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
+  )
+
   return (
     <>
       <Navbar />
@@ -44,9 +54,13 @@ function App() {
           <p>Nuestro menú</p>
           <h2>Explora nuestros productos</h2>
         </div>
+        <Buscador
+        busqueda={busqueda}
+        cambiarBusqueda={setBusqueda}
+        />
 
         <div className="productos__grid">
-          {productos.map((producto) => (
+          {productosFiltrados.map((producto) => (
             <ProductoCard
               key={producto.id}
               nombre={producto.nombre}
