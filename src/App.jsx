@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 import ProductoCard from './components/ProductoCard'
 import Buscador from './components/Buscador'
 import ProductoDetalle from './components/ProductoDetalle'
+import Carrito from './components/Carrito'
 
 const productos = [
   {
@@ -41,7 +42,7 @@ const productos = [
 function App() {
   const [busqueda, setBusqueda] = useState('')
   const [productoSeleccionado, setProductoSeleccionado] = useState(null)
-
+  const [carrito, setCarrito] = useState([])
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
   )
@@ -76,10 +77,12 @@ function App() {
           ))}
         </div>
       </section>
+      <Carrito carrito={carrito} />
       {productoSeleccionado && (
         <ProductoDetalle
         producto={productoSeleccionado}
         cerrarDetalle={() => setProductoSeleccionado(null)}
+        agregarAlCarrito={agregarAlCarrito}
         />
       )}
     </>

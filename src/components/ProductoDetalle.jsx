@@ -1,4 +1,4 @@
-function ProductoDetalle({producto, cerrarDetalle}){
+function ProductoDetalle({producto, cerrarDetalle, agregarAlCarrito}){
     return(
         <div className="detalle-fondo">
             <div className="detalle">
@@ -24,6 +24,12 @@ function ProductoDetalle({producto, cerrarDetalle}){
                     ${producto.precio.toLocaleString("es-CL")}
                 </strong>
 
+                <button className="detalle__agregar"
+                onClick={() => agregarAlCarrito(producto)}              
+                >
+                    agregar al carrito                   
+                </button>
+                
             </div>
 
         </div>
