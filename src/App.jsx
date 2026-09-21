@@ -67,6 +67,14 @@ function App() {
       carrito.filter((producto) => producto.id !== id)
     )
   }
+  const ConfirmarPedido = () => {
+    if (carrito.lenght === 0) {
+      alert('El carrito esta vacio')
+      return
+    }
+    alert('Pedido realizado correctamente')
+    setCarrito([])
+  }
 
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
