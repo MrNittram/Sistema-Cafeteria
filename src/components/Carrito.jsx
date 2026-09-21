@@ -1,4 +1,4 @@
-function Carrito({ carrito, eliminarDelCarrito }) {
+function Carrito({ carrito, eliminarDelCarrito, confirmarPedido }) {
   const total = carrito.reduce(
     (suma, producto) =>
       suma + producto.precio * producto.cantidad,
@@ -43,6 +43,12 @@ function Carrito({ carrito, eliminarDelCarrito }) {
               ${total.toLocaleString('es-CL')}
             </strong>
           </div>
+          <button
+          className="carrito__confirmar"
+          onClick={confirmarPedido}
+          >
+            confirmarPedido
+          </button>
         </>
       )}
     </section>

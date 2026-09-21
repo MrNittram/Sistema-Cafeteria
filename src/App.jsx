@@ -113,6 +113,7 @@ function App() {
       <Carrito 
         carrito={carrito} 
         eliminarDelCarrito={eliminarDelCarrito}
+        ConfirmarPedido={ConfirmarPedido}
       />
       {productoSeleccionado && (
         <ProductoDetalle
