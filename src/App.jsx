@@ -1,3 +1,4 @@
+import { getProductos } from './services/productoService'
 import {useState, useEffect} from 'react'
 import './App.css'
 
@@ -17,14 +18,13 @@ function App() {
   
   useEffect(() => {
 
-    fetch('/data/productos.json')
-      .then((respuesta) => respuesta.json())
+    getProductos()
       .then((datos) => {
         setProductos(datos)
       })
   
   }, [])
-  
+
   const agregarAlCarrito = (producto) => {
     const productoExistente = carrito.find(
       (item) => item.id === producto.id
