@@ -91,9 +91,10 @@ body {
 
   .producto-card {
     overflow: hidden;
-    border: 1px solid #e8e1dc;
-    border-radius: 16px;
-    background-color: #ffffff;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgb(59, 42, 34, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .producto-card__imagen{
@@ -228,4 +229,9 @@ body {
 
 .carrito_confirmar:hover {
   background-color: #594036;
+}
+@media (max-width: 900px) {
+  .productos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
