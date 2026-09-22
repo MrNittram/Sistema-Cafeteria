@@ -1,14 +1,25 @@
 function Navbar() {
     return (
-        <nav>
-            <h2>CaféSahur</h2>
+        <nav className="navbar">
+            <h2 className="navbar__logo"> 
+            CaféSahur
+            </h2>
 
-            <div>
-            <a href="#">Inicio</a>
-            <a href="#">Productos</a>
-            <a href="#">Categorias</a>
-            <button>Carrito</button>
+            <div className="navbar__links">
+                <a href="#">
+                    Inicio
+                </a>
 
+                <a href="#">
+                    Productos
+                </a>
+                <a href="#">
+                    Menú
+                </a>
+                
+                <button className="navbar_cart">
+                    Carrito
+                </button>
             </div>
         </nav>
     )

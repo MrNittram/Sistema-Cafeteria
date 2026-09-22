@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 40px;
+    padding: 20px 50px;
     background-color: #3b2a22;
   }
   
@@ -43,36 +43,46 @@ body {
     padding: 60px 20px;
   }
   .hero {
-    padding: 40px 20px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
     text-align: center;
     background-color: #f7f3ee;
   }
   
   .hero h1 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #2c1e18;
-    font-size: 42px;
+    font-size: 52px;
+    font-weight: 700;
   }
   
   .hero p {
+    max-width: 600px;
     color: #66554d;
-    font-size: 18px;
+    font-size: 20px;
+    line-height: 1.6;
   }
 
   .productos {
-    padding: 70px 40px;
+    padding: 80px 40px;
     background-color: white;
   }
 
   .productos__titulo {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
   }
 
   .productos__titulo p {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color:#8b5e3c;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   .productos__titulo h2 {
@@ -102,9 +112,9 @@ body {
     align-items: center;
     justify-content: center;
 
-    height: 180px;
+    height: 200px;
     background-color: #f7f3ee;
-    font-size: 70px;
+    font-size: 80px;
   }
 
   .producto-card__contenido{
@@ -143,17 +153,25 @@ body {
 
   .producto-card__footer button{
     border: none;
-    border-radius: 8px;
-    padding: 10px 14px;
+    border-radius: 10px;
+    padding: 10px 10px;
 
     background-color: #3b2a22;
     color: white;
 
+    font-weight: bold;
+
     cursor: pointer;
+    transition: 0.3s;
   }
 
   .producto-card__footer button:hover {
     background-color: #594036;
+    transform: scale(1.08);
+  }
+  .producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(59, 42, 34, 0.18);
   }
 
   .detalle-fondo {

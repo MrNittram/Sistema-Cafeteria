@@ -2,7 +2,7 @@ function ProductoCard({ nombre, descripcion, precio, categoria, verDetalle}) {
     return (
       <article className="producto-card">
         <div className="producto-card__imagen">
-          foto
+        ☕
         </div>
   
         <div className="producto-card__contenido">
