@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import './App.css'
 
 import Navbar from './components/Navbar'
@@ -8,38 +8,9 @@ import Buscador from './components/Buscador'
 import ProductoDetalle from './components/ProductoDetalle'
 import Carrito from './components/Carrito'
 
-const productos = [
-  {
-    id: 1,
-    nombre: 'Latte',
-    descripcion: 'Espresso suave combinado con leche vaporizada.',
-    precio: 3500,
-    categoria: 'Café caliente',
-  },
-  {
-    id: 2,
-    nombre: 'Cappuccino',
-    descripcion: 'Espresso con leche vaporizada y una capa de espuma.',
-    precio: 3200,
-    categoria: 'Café caliente',
-  },
-  {
-    id: 3,
-    nombre: 'Mocha',
-    descripcion: 'Espresso, chocolate y leche vaporizada.',
-    precio: 3800,
-    categoria: 'Café caliente',
-  },
-  {
-    id: 4,
-    nombre: 'Iced Latte',
-    descripcion: 'Espresso con leche fría y hielo.',
-    precio: 3900,
-    categoria: 'Bebida fría',
-  },
-]
 
 function App() {
+  const [productos,setProductos] = useState([])
   const [busqueda, setBusqueda] = useState('')
   const [productoSeleccionado, setProductoSeleccionado] = useState(null)
   const [carrito, setCarrito] = useState([])
