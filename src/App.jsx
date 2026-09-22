@@ -12,6 +12,8 @@ import Carrito from './components/Carrito'
 
 function App() {
   const [productos,setProductos] = useState([])
+  const [cargando, setCargando] = useState(true)
+  const [error, setError] = useState(null)
   const [busqueda, setBusqueda] = useState('')
   const [productoSeleccionado, setProductoSeleccionado] = useState(null)
   const [carrito, setCarrito] = useState([])
@@ -21,6 +23,12 @@ function App() {
     getProductos()
       .then((datos) => {
         setProductos(datos)
+      })
+      .catch(() => {
+        setError('Error al cargar productos')
+      })
+      .finally(() => {
+        setCargando(false)
       })
   
   }, [])
@@ -49,8 +57,8 @@ function App() {
       carrito.filter((producto) => producto.id !== id)
     )
   }
-  const ConfirmarPedido = () => {
-    if (carrito.lenght === 0) {
+  const confirmarPedido = () => {
+    if (carrito.length === 0) {
       alert('El carrito esta vacio')
       return
     }
@@ -61,6 +69,13 @@ function App() {
   const productosFiltrados = productos.filter((producto) =>
     producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
   )
+
+  if (cargando) {
+    return <h2> Cargando productos...</h2>
+  }
+  if (error) {
+    return <h2>{error}</h2>
+  }
 
   return (
     <>
@@ -95,7 +110,7 @@ function App() {
       <Carrito 
         carrito={carrito} 
         eliminarDelCarrito={eliminarDelCarrito}
-        ConfirmarPedido={ConfirmarPedido}
+        ConfirmarPedido={confirmarPedido}
       />
       {productoSeleccionado && (
         <ProductoDetalle
