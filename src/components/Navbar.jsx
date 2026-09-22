@@ -17,8 +17,8 @@ function Navbar() {
                     Menú
                 </a>
                 
-                <button className="navbar_cart">
-                    Carrito
+                <button className="navbar__cart">
+                    Carrito 🛒
                 </button>
             </div>
         </nav>
