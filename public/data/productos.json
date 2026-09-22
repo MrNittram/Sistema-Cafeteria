@@ -1,0 +1,33 @@
+[
+    {
+        "id":1,
+        "nombre": "Latte",
+        "descripcion": "Espresso combinado con leche vaporizada.",
+        "precio": 3500,
+        "categoria": "Café caliente"
+    },
+
+    {
+        "id":2,
+        "nombre": "Cappucino",
+        "descripcion": "Espresso con leche vaporizada y una capa de espuma.",
+        "precio": 3200,
+        "categoria": "Café caliente"
+    },
+
+    {
+        "id":3,
+        "nombre": "Mocha",
+        "descripcion": "Espresso, chocolate y leche vaporizada.",
+        "precio": 3800,
+        "categoria": "Café caliente"
+    },
+
+    {
+        "id":4,
+        "nombre": "Iced Lattle",
+        "descripcion": "Espresso con leche fría y hielo.",
+        "precio": 3900,
+        "categoria": "Bebida fría"
+    }
+]
