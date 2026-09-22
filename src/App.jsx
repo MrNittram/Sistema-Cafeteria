@@ -14,6 +14,17 @@ function App() {
   const [busqueda, setBusqueda] = useState('')
   const [productoSeleccionado, setProductoSeleccionado] = useState(null)
   const [carrito, setCarrito] = useState([])
+  
+  useEffect(() => {
+
+    fetch('/data/productos.json')
+      .then((respuesta) => respuesta.json())
+      .then((datos) => {
+        setProductos(datos)
+      })
+  
+  }, [])
+  
   const agregarAlCarrito = (producto) => {
     const productoExistente = carrito.find(
       (item) => item.id === producto.id
