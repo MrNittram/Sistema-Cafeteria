@@ -9,7 +9,7 @@ function ProductoDetalle({producto, cerrarDetalle, agregarAlCarrito}){
                     x    
                 </button>
                 <div className="detalle__imagen">
-                    foto
+                ☕
                 </div>
 
                 <span className="detalle__categoria">
