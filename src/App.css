@@ -110,6 +110,10 @@ body {
     background-color: white;
     box-shadow: 0 8px 20px rgb(59, 42, 34, 0.12);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   .producto-card__imagen{
@@ -124,6 +128,9 @@ body {
 
   .producto-card__contenido{
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   .producto-card__categoria{
@@ -139,15 +146,16 @@ body {
   }
 
   .producto-card p {
-    min-height: 48px;
+    min-height: 75px;
     color: #66554d;
     line-height: 1.5;
   }
 
   .producto-card__footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
     margin-top: 20px;
   }
 

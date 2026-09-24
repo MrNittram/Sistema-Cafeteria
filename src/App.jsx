@@ -63,7 +63,7 @@ function App() {
       alert('El carrito esta vacio')
       return
     }
-    alert('Pedido realizado correctamente')
+    alert('Pedido realizado correctamente. ¡Gracias por comprar en CaféSahur!')
     setCarrito([])
   }
 
@@ -89,7 +89,10 @@ function App() {
         } 
       />
       <Hero />
-      <section className="productos">
+      <section
+      id="productos" 
+      className="productos"
+      >
         <div className="productos__titulo">
           <p>Nuestro menú</p>
           <h2>Explora nuestros productos</h2>
