@@ -333,6 +333,26 @@ body {
   color: #3b2a22;
 }
 
+.footer {
+  background-color: #3b2a22;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(59, 42, 34, 0.15);
+}
+
+.footer a {
+  color: white;
+  text-decoration:none;
+}
+.footer__developers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 @media (max-width: 900px) {
   .productos__grid {
     grid-template-columns: repeat(2, 1fr);

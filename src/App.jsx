@@ -8,6 +8,7 @@ import ProductoCard from './components/ProductoCard'
 import Buscador from './components/Buscador'
 import ProductoDetalle from './components/ProductoDetalle'
 import Carrito from './components/Carrito'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -112,6 +113,7 @@ function App() {
         eliminarDelCarrito={eliminarDelCarrito}
         ConfirmarPedido={confirmarPedido}
       />
+      <Footer />
       {productoSeleccionado && (
         <ProductoDetalle
         producto={productoSeleccionado}

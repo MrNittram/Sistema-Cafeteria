@@ -1,6 +1,6 @@
 function Footer () {
     return (
-        <footer className="Footer">
+        <footer className="footer">
             <h3>
                 CaféSahur☕️
             </h3>
@@ -10,11 +10,11 @@ function Footer () {
             <p>
                 Equipo de desarrollo y gestión:
             </p>
-            <div>
-                className="footer_developers"
+            <div className="footer__developers">
                 <a href="https://github.com/MrNittram">
                     @MrNittram
                 </a>
+
                 <a href="https://github.com/Cris-0523">
                     @Cris-0523
                 </a>
