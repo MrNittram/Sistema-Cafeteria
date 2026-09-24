@@ -110,6 +110,7 @@ function App() {
               descripcion={producto.descripcion}
               precio={producto.precio}
               categoria={producto.categoria}
+              imagen={producto.imagen}
               verDetalle={() => {
                 console.log('Abriendo:', producto.nombre)
                 setProductoSeleccionado(producto)
