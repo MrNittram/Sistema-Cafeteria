@@ -41,6 +41,12 @@ body {
     color: #3b2a22;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+  }
+  .navbar__cart:hover {
+    background-color: #f7f3ee;
+    transform: scale(1.05);
+    transition: 0.3s;
   }
   
   .app {
