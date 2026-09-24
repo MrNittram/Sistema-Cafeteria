@@ -63,7 +63,20 @@ body {
     text-align: center;
     background-color: #f7f3ee;
   }
-  
+  .hero__button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background-color: #3b2a22;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    border-radius: 25px;
+  }
+  .hero__button:hover{
+    background-color: #594036;
+    transform: scale(1.05);
+  }
   .hero h1 {
     margin-bottom: 15px;
     color: #2c1e18;
