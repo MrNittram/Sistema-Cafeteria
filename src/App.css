@@ -272,22 +272,71 @@ body {
   transform: scale(1.05);
 }
 
-.carrito_confirmar {
-  margin-top: 20px;
+.carrito {
+  margin: 50px 40px;
+  padding: 30px;
+  background-color: #ffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgb(59, 42, 34, 0.12);
+}
+.carrito h2 {
+  color: #3b2a22;
+  margin-bottom: 30px;
+}
+
+.carrito__confirmar {
+  margin-top: 25px auto 0;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   padding: 12px 20px;
+  width: 250px;
   background-color: #3b2a22;
   color: white;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.carrito_confirmar:hover {
+.carrito__confirmar:hover {
   background-color: #594036;
+  transform: scale(1.05);
+  transition: 0.3s;
 }
+
+.carrito__producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.carrito__producto button {
+  border: none;
+  background: none;
+  color: #8b5e3c;
+  cursor: pointer;
+}
+.carrito__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+.carrito__total strong {
+  font-size: 24px;
+  color: #3b2a22;
+}
+
 @media (max-width: 900px) {
   .productos__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .producto-card button {
+    padding: 8px 12px;
+    font-size: 12px;
   }
 }
 @media (max-width: 600px) {

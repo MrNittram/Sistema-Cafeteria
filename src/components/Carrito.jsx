@@ -7,7 +7,7 @@ function Carrito({ carrito, eliminarDelCarrito, confirmarPedido }) {
 
   return (
     <section className="carrito">
-      <h2>Tu pedido</h2>
+      <h2> 🛒 Tu pedido</h2>
 
       {carrito.length === 0 ? (
         <p>Tu carrito está vacío.</p>
@@ -47,7 +47,7 @@ function Carrito({ carrito, eliminarDelCarrito, confirmarPedido }) {
           className="carrito__confirmar"
           onClick={confirmarPedido}
           >
-            confirmarPedido
+            Confirmar Pedido
           </button>
         </>
       )}
