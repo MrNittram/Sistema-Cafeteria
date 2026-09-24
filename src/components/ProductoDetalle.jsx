@@ -9,7 +9,9 @@ function ProductoDetalle({producto, cerrarDetalle, agregarAlCarrito}){
                     x    
                 </button>
                 <div className="detalle__imagen">
-                ☕
+                <img src={producto.imagen}
+                 alt={producto.nombre} 
+                 />
                 </div>
 
                 <span className="detalle__categoria">

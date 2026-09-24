@@ -1,8 +1,10 @@
-function ProductoCard({ nombre, descripcion, precio, categoria,imagen, verDetalle}) {
+function ProductoCard({ nombre, descripcion, precio, categoria, imagen, verDetalle}) {
     return (
       <article className="producto-card">
         <div className="producto-card__imagen">
-        <img src="{imagen}" alt="{nombre}" />
+        <img src={imagen} 
+        alt={nombre} 
+        />
         </div>
   
         <div className="producto-card__contenido">
