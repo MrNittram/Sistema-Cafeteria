@@ -80,7 +80,14 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        cantidadCarrito={
+            carrito.reduce(
+                (total, producto) => total + producto.cantidad,
+                0   
+            )
+        } 
+      />
       <Hero />
       <section className="productos">
         <div className="productos__titulo">

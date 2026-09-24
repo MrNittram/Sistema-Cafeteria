@@ -19,16 +19,20 @@ function ProductoDetalle({producto, cerrarDetalle, agregarAlCarrito}){
                 <h2> {producto.nombre} </h2>
 
                 <p> {producto.descripcion} </p>
-
+                <div className="detalle__footer">
                 <strong>
                     ${producto.precio.toLocaleString("es-CL")}
                 </strong>
 
-                <button className="detalle__agregar"
+                <button 
+                className="detalle__agregar"
                 onClick={() => agregarAlCarrito(producto)}              
                 >
                     agregar al carrito                   
                 </button>
+                </div>
+
+                
                 
             </div>
 

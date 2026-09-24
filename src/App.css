@@ -352,6 +352,12 @@ body {
   justify-content: center;
   gap: 20px;
 }
+.detalle__footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
 @media (max-width: 900px) {
   .productos__grid {
@@ -374,4 +380,7 @@ body {
     flex-direction: column;
     gap: 15px;
   }
+}
+html {
+  scroll-behavior: smooth;
 }

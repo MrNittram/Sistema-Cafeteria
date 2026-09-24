@@ -6,7 +6,9 @@ function Carrito({ carrito, eliminarDelCarrito, confirmarPedido }) {
   )
 
   return (
-    <section className="carrito">
+    <section
+    id="carrito" 
+    className="carrito">
       <h2> 🛒 Tu pedido</h2>
 
       {carrito.length === 0 ? (
