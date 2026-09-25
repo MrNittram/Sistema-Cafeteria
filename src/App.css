@@ -404,24 +404,52 @@ body {
   gap: 15px;
 }
 .carrito__cantidad {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin-top:15px;
 }
 
+
 .carrito__cantidad button {
-  width: 30px;
-  height: 30px;
 
-  border-radius: 50%;
-  border: 1px solid #3b2a22;
+  width:32px;
+  height:32px;
 
-  background-color: white;
-  color: #3b2a22;
+  border:none;
+  border-radius:50%;
 
-  cursor: pointer;
-  font-weight: bold;
+  background-color:#3b2a22;
+  color:white;
+
+  font-size:18px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+
+.carrito__cantidad button:hover {
+
+  background-color:#8b5e3c;
+  transform:scale(1.1);
+
+}
+
+
+.carrito__cantidad span {
+
+  min-width:25px;
+
+  text-align:center;
+
+  font-weight:bold;
+
+  color:#3b2a22;
+
 }
 
 @media (max-width: 900px) {
