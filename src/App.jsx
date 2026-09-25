@@ -17,7 +17,15 @@ function App() {
   const [error, setError] = useState(null)
   const [busqueda, setBusqueda] = useState('')
   const [productoSeleccionado, setProductoSeleccionado] = useState(null)
-  const [carrito, setCarrito] = useState([])
+  const [carrito, setCarrito] = useState(() => {
+
+    const carritoGuardado = localStorage.getItem("carrito")
+  
+    return carritoGuardado
+      ? JSON.parse(carritoGuardado)
+      : []
+  
+  })
   
   useEffect(() => {
 
@@ -33,6 +41,14 @@ function App() {
       })
   
   }, [])
+  useEffect(() => {
+
+    localStorage.setItem(
+      "carrito",
+      JSON.stringify(carrito)
+    )
+  
+  }, [carrito])
 
   const agregarAlCarrito = (producto) => {
     const productoExistente = carrito.find(
