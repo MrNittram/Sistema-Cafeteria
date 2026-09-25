@@ -1,4 +1,4 @@
-function Carrito({ carrito, eliminarDelCarrito, confirmarPedido }) {
+function Carrito({ carrito, eliminarDelCarrito, aumentarCantidad, disminuirCantidad, confirmarPedido }) {
   const total = carrito.reduce(
     (suma, producto) =>
       suma + producto.precio * producto.cantidad,
@@ -21,9 +21,29 @@ function Carrito({ carrito, eliminarDelCarrito, confirmarPedido }) {
               key={producto.id}
             >
               <div>
-                <strong>{producto.nombre}</strong>
-                <span> x{producto.cantidad}</span>
-              </div>
+  <strong>{producto.nombre}</strong>
+
+  <div className="carrito__cantidad">
+
+    <button
+      onClick={() => disminuirCantidad(producto.id)}
+    >
+      -
+    </button>
+
+    <span>
+      {producto.cantidad}
+    </span>
+
+    <button
+      onClick={() => aumentarCantidad(producto.id)}
+    >
+      +
+    </button>
+
+  </div>
+
+</div>
 
               <span>
                 ${(producto.precio * producto.cantidad)

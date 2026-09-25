@@ -74,6 +74,32 @@ function App() {
       carrito.filter((producto) => producto.id !== id)
     )
   }
+  const aumentarCantidad = (id) => {
+    setCarrito(
+      carrito.map((producto) =>
+        producto.id === id
+          ? {
+              ...producto,
+              cantidad: producto.cantidad + 1
+            }
+          : producto
+      )
+    )
+  }
+  
+  
+  const disminuirCantidad = (id) => {
+    setCarrito(
+      carrito.map((producto) =>
+        producto.id === id && producto.cantidad > 1
+          ? {
+              ...producto,
+              cantidad: producto.cantidad - 1
+            }
+          : producto
+      )
+    )
+  }
   const confirmarPedido = () => {
     if (carrito.length === 0) {
       alert('El carrito esta vacio')
@@ -139,6 +165,8 @@ function App() {
         carrito={carrito} 
         eliminarDelCarrito={eliminarDelCarrito}
         ConfirmarPedido={confirmarPedido}
+        disminuirCantidad={disminuirCantidad}
+        aumentarCantidad={aumentarCantidad}
       />
       <Footer />
       {productoSeleccionado && (

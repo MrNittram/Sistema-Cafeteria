@@ -403,6 +403,26 @@ body {
   align-items: center;
   gap: 15px;
 }
+.carrito__cantidad {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.carrito__cantidad button {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid #3b2a22;
+
+  background-color: white;
+  color: #3b2a22;
+
+  cursor: pointer;
+  font-weight: bold;
+}
 
 @media (max-width: 900px) {
   .productos__grid {
