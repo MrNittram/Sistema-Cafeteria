@@ -1,7 +1,14 @@
 body {
     background-color: #f7f3ee;
+    font-family: "Lato",sans-serif;
+    margin: 5px;
+    padding: 0px;
   }
-  
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", serif;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,6 +21,7 @@ body {
     color: white;
     font-size: 28px;
     font-weight: 700;
+    font-family: "PlayDisplay",serif;
   }
   
   .navbar__links {
@@ -89,6 +97,9 @@ body {
     color: #2c1e18;
     font-size: 52px;
     font-weight: 700;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 1px;
+
   }
   
   .hero p {
