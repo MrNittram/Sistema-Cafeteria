@@ -1,16 +1,74 @@
-# React + Vite
+# ☕ CaféSahur
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Descripción
 
-Currently, two official plugins are available:
+CaféSahur es una aplicación web de cafetería desarrollada con React y Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+La aplicación permite explorar un menú de productos, buscar productos, consultar sus detalles y crear un pedido mediante un carrito de compras.
 
-## React Compiler
+El proyecto cuenta con un diseño responsive para adaptarse a computadores, tablets y dispositivos móviles.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Funcionalidades
 
-## Expanding the Oxlint configuration
+- Visualización de productos.
+- Buscador de productos.
+- Filtrado de productos por nombre.
+- Visualización del detalle de cada producto.
+- Agregar productos al carrito.
+- Aumentar la cantidad de productos.
+- Disminuir la cantidad de productos.
+- Eliminar productos del carrito.
+- Contador de productos en el carrito.
+- Persistencia del carrito mediante `localStorage`.
+- Confirmación del pedido.
+- Diseño responsive.
+- Carga de productos mediante una API simulada.
+- Manejo de estados de carga y errores.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Instrucciones de uso
+
+### 1. Ingresar al sitio
+
+Al ingresar a CaféSahur se muestra la página principal junto con el menú de productos disponibles.
+
+### 2. Explorar productos
+
+El usuario puede recorrer los productos disponibles y revisar su nombre, descripción, categoría, precio e imagen.
+
+### 3. Buscar un producto
+
+El usuario puede utilizar el buscador para encontrar un producto escribiendo su nombre.
+
+### 4. Ver el detalle de un producto
+
+Al seleccionar un producto se abre una ventana con información detallada del producto.
+
+### 5. Agregar un producto al carrito
+
+Dentro del detalle del producto se puede presionar el botón "Agregar al carrito".
+
+El producto será agregado al carrito de compras.
+
+### 6. Administrar el carrito
+
+Desde el carrito el usuario puede:
+
+- Aumentar la cantidad de un producto.
+- Disminuir la cantidad de un producto.
+- Eliminar un producto.
+- Revisar los productos agregados al pedido.
+
+El carrito se guarda en `localStorage`, por lo que sus productos permanecen almacenados al recargar la página.
+
+### 7. Confirmar el pedido
+
+Cuando el usuario termine de seleccionar sus productos puede presionar "Confirmar pedido".
+
+La aplicación mostrará un mensaje indicando que el pedido fue realizado correctamente y posteriormente vaciará el carrito.
+
+## Instalación
+
+Para ejecutar el proyecto de manera local se deben instalar primero las dependencias.
+
+```bash
+npm install
