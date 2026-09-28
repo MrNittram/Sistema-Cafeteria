@@ -18,11 +18,17 @@ body {
   }
   
   .navbar__logo {
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
-    font-family: "PlayDisplay",serif;
-  }
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 20%;
+  display: block;
+}
   
   .navbar__links {
     display: flex;

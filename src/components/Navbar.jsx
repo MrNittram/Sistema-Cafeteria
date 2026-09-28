@@ -4,7 +4,8 @@ function Navbar({ cantidadCarrito }) {
       <nav className="navbar">
   
         <div className="navbar__logo">
-          CaféSahur ☕
+          <img src="/imagenes/logo-cafesahur.png" alt="CaféSahur" 
+          />
         </div>
   
   
