@@ -164,7 +164,7 @@ function App() {
       <Carrito 
         carrito={carrito} 
         eliminarDelCarrito={eliminarDelCarrito}
-        ConfirmarPedido={confirmarPedido}
+        confirmarPedido={confirmarPedido}
         disminuirCantidad={disminuirCantidad}
         aumentarCantidad={aumentarCantidad}
       />
